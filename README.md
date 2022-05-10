@@ -17,9 +17,7 @@ The final two rows represent the minutes. The upper row represents 5 minute bloc
 
 Project Uses:
 Test Driven Development (TDD)
-
 Unit Tests
-
 View Bindings
 
 Prerequisites
@@ -28,7 +26,7 @@ Gradle 6.7.1
 Setup
 clone the master branch
 
- git clone https://github.com/2021-DEV2-066/BerlinClock.git
+ git clone https://github.com/mohamedabdel247/BerlinClock.git
 Running App
 open the app in android studio
 do a gradle build to install all the dependencies
