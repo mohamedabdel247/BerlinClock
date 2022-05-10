@@ -55,4 +55,14 @@ object TimesHelper {
         return fiveMinutesList
     }
 
+    fun getFiveHoursIlluminated(hours : Int) : Array<Boolean>{
+        var fiveHoursArray  = Array(4){false}
+        return fiveHoursArray
+    }
+
+    fun getOneHourIlluminated(hours : Int) : Array<Boolean>{
+        var oneHourArray  = Array(4){false}
+        return oneHourArray
+    }
+
 }

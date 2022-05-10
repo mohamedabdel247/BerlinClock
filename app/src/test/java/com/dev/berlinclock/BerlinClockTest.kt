@@ -170,4 +170,77 @@ class BerlinClockTest {
         Assert.assertArrayEquals(oneMinutesExpected, oneMinutesResult)
     }
 
+    //=================hours
+    @Test
+    fun `test zero hours should return white lamps`() {
+        val fiveHoursResult = TimesHelper.getFiveHoursIlluminated(0)
+        val oneHoursResult = TimesHelper.getOneHourIlluminated(0)
+
+        val fiveHoursExpected  :Array<Boolean> = arrayOf(false,false,false,false)
+        val oneHoursExpected :Array<Boolean> = arrayOf(false,false,false,false)
+
+        Assert.assertArrayEquals(fiveHoursExpected, fiveHoursResult)
+        Assert.assertArrayEquals(oneHoursExpected, oneHoursResult)
+    }
+
+    @Test
+    fun `test full hours should return Illuminated lamps`() {
+        val fiveHoursResult = TimesHelper.getFiveHoursIlluminated(23)
+        val oneHoursResult = TimesHelper.getOneHourIlluminated(23)
+
+        val fiveHoursExpected  :Array<Boolean> = arrayOf(true,true,true,true)
+        val oneHoursExpected :Array<Boolean> = arrayOf(true,true,true,false)
+
+        Assert.assertArrayEquals(fiveHoursExpected, fiveHoursResult)
+        Assert.assertArrayEquals(oneHoursExpected, oneHoursResult)
+    }
+
+    @Test
+    fun `test three lamps of five hours should Illuminated lamps and one hours should return zero Illuminated lamps`() {
+        val fiveHoursResult = TimesHelper.getFiveHoursIlluminated(15)
+        val oneHoursResult = TimesHelper.getOneHourIlluminated(15)
+
+        val fiveHoursExpected  :Array<Boolean> = arrayOf(true,true,true,false)
+        val oneHoursExpected :Array<Boolean> = arrayOf(false,false,false,false)
+
+        Assert.assertArrayEquals(fiveHoursExpected, fiveHoursResult)
+        Assert.assertArrayEquals(oneHoursExpected, oneHoursResult)
+    }
+
+    @Test
+    fun `test four lamps of five hours should Illuminated lamps and one hours should return one Illuminated lamps`() {
+        val fiveHoursResult = TimesHelper.getFiveHoursIlluminated(21)
+        val oneHoursResult = TimesHelper.getOneHourIlluminated(21)
+
+        val fiveHoursExpected  :Array<Boolean> = arrayOf(true,true,true,true)
+        val oneHoursExpected :Array<Boolean> = arrayOf(true,false,false,false)
+
+        Assert.assertArrayEquals(fiveHoursExpected, fiveHoursResult)
+        Assert.assertArrayEquals(oneHoursExpected, oneHoursResult)
+    }
+
+    @Test
+    fun `test zero lamps of five hours should Illuminated lamps and two hours should return one Illuminated lamps`() {
+        val fiveHoursResult = TimesHelper.getFiveHoursIlluminated(2)
+        val oneHoursResult = TimesHelper.getOneHourIlluminated(2)
+
+        val fiveHoursExpected  :Array<Boolean> = arrayOf(false,false,false,false)
+        val oneHoursExpected :Array<Boolean> = arrayOf(true,true,false,false)
+
+        Assert.assertArrayEquals(fiveHoursExpected, fiveHoursResult)
+        Assert.assertArrayEquals(oneHoursExpected, oneHoursResult)
+    }
+
+    @Test
+    fun `test three lamps of five hours should Illuminated lamps and two hours should return one Illuminated lamps`() {
+        val fiveHoursResult = TimesHelper.getFiveHoursIlluminated(17)
+        val oneHoursResult = TimesHelper.getOneHourIlluminated(17)
+
+        val fiveHoursExpected  :Array<Boolean> = arrayOf(true,true,true,false)
+        val oneHoursExpected :Array<Boolean> = arrayOf(true,true,false,false)
+
+        Assert.assertArrayEquals(fiveHoursExpected, fiveHoursResult)
+        Assert.assertArrayEquals(oneHoursExpected, oneHoursResult)
+    }
+
 }
