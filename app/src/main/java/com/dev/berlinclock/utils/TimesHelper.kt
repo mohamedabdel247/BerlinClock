@@ -56,12 +56,22 @@ object TimesHelper {
     }
 
     fun getFiveHoursIlluminated(hours : Int) : Array<Boolean>{
-        var fiveHoursArray  = Array(4){false}
+        val arraySize = 4
+        val fiveHoursCount = hours/5
+        var fiveHoursArray  = Array(arraySize){false}
+        for (i in 0 until fiveHoursCount){
+            fiveHoursArray[i] = true
+        }
         return fiveHoursArray
     }
 
     fun getOneHourIlluminated(hours : Int) : Array<Boolean>{
-        var oneHourArray  = Array(4){false}
+        val arraySize = 4
+        val oneHoursReminders = hours.mod(5)
+        var oneHourArray  = Array(arraySize){false}
+        for (i in 0 until oneHoursReminders){
+            oneHourArray[i] = true
+        }
         return oneHourArray
     }
 
