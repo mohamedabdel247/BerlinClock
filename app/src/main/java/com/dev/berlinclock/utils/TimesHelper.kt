@@ -5,7 +5,10 @@ package com.dev.myapplication.utils
 object TimesHelper {
 
     fun isSecondsIlluminated(seconds : Int) : Boolean{
-        return false
+        var secondsIlluminated = false
+        secondsIlluminated = seconds % 2 == 0
+
+        return secondsIlluminated
     }
 
 }
