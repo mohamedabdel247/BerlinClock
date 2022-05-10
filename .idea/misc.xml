@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/New folder (2)/New folder/BerlinClock/app/src/main/res/drawable/sec_circle_bg.xml" value="0.11875" />
+        <entry key="..\:/New folder (2)/New folder/BerlinClock/app/src/main/res/drawable/white_circle_bg.xml" value="0.11875" />
         <entry key="..\:/New folder (2)/New folder/BerlinClock/app/src/main/res/layout/activity_main.xml" value="0.2857789855072464" />
+        <entry key="..\:/New folder (2)/New folder/BerlinClock/app/src/main/res/layout/clock_items_blocks.xml" value="0.10260416666666666" />
+        <entry key="..\:/New folder (2)/New folder/BerlinClock/app/src/main/res/layout/five_minutes_items.xml" value="0.10260416666666666" />
       </map>
     </option>
   </component>
